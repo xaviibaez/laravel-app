@@ -25,7 +25,7 @@ class ContratosController extends Controller
      */
     public function create()
     {
-        //
+        return view('contratos.create');
     }
 
     /**
@@ -36,7 +36,12 @@ class ContratosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+        ]);
+
+        return 1;
     }
 
     /**
