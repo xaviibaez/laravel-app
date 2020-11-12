@@ -17,6 +17,7 @@ class CreateContratosTable extends Migration
             $table->increments('id');
             $table->integer('id_cliente');
             $table->string('nombre_cliente');
+            $table->string('nombre_contrato');
             $table->timestamps();
         });
     }
