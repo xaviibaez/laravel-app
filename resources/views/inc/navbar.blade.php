@@ -24,8 +24,7 @@
 
             <ul class="nav navbar-nav">
               <li><a href="/lsapp/public">Home</a></li>
-              <li><a href="/lsapp/public/about">About</a></li>
-              <li><a href="/lsapp/public/services">Services</a></li>
+              <li><a href="/lsapp/public/about">Sobre Mi</a></li>
               <li><a href="/lsapp/public/contratos">Blog</a></li>
             </ul>
         </div>
