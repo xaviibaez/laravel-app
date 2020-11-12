@@ -14,7 +14,8 @@ class ContratosController extends Controller
      */
     public function index()
     {
-        $contratos = Contrato::all();
+        //$contratos = Contrato::all();
+        $contratos = Contrato::orderBy('created_at','desc')->paginate(10);
         return view('contratos.index')->with('contratos', $contratos);
     }
 
@@ -37,11 +38,19 @@ class ContratosController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'body' => 'required',
+            'nombre_contrato' => 'required',
+            'id_cliente' => 'required',
+            'nombre_cliente' => 'required',
         ]);
 
-        return 1;
+        //Crear nuevo contrato
+        $contrato = new Contrato;
+        $contrato->nombre_contrato = $request->input('nombre_contrato');
+        $contrato->id_cliente = $request->input('id_cliente');
+        $contrato->nombre_cliente = $request->input('nombre_cliente');
+        $contrato->save();
+        
+        return redirect('/contratos')->with('success', 'Contrato creado');
     }
 
     /**
