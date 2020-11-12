@@ -15,7 +15,7 @@
             @yield('content')
         </div>
 
-        <!-- Scripts -->
+        <!-- Scripts Es para poder editar el texto con negrita, etc, no lo usaré-->
         <!-- <script src="{{ asset('js/app.js') }}"></script> -->
         <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
         <script>
