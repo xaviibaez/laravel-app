@@ -26,6 +26,7 @@
               <li><a href="/lsapp/public">Home</a></li>
               <li><a href="/lsapp/public/about">Sobre Mi</a></li>
               <li><a href="/lsapp/public/contratos">Contratos</a></li>
+              <li><a href="/lsapp/public/contratos/create">Crear contrato</a></li>
             </ul>
         </div>
     </div>
