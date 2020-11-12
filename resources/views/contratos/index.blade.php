@@ -5,7 +5,8 @@
     @if(count($contratos) > 1)
         @foreach ($contratos as $contrato)
             <div class="well">
-                <h3>{{$contrato->id}}</h3>
+                <h4>{{$contrato->id}}</h4>
+                <h4>{{$contrato->nombre_contrato}}</h4>
                 <small>{{$contrato->created_at}}</small>
             </div>
         @endforeach

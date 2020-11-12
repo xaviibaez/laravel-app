@@ -26,7 +26,7 @@
               <li><a href="/lsapp/public">Home</a></li>
               <li><a href="/lsapp/public/about">About</a></li>
               <li><a href="/lsapp/public/services">Services</a></li>
-              <li><a href="/posts">Blog</a></li>
+              <li><a href="/lsapp/public/contratos">Blog</a></li>
             </ul>
         </div>
     </div>
