@@ -47,7 +47,8 @@ class ContratosController extends Controller
      */
     public function show($id)
     {
-        //
+        $contrato = Contrato::find($id);
+        return view('contratos.show')->with('contrato', $contrato);
     }
 
     /**
