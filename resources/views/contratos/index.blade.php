@@ -9,7 +9,7 @@
             <div class="well">
                 <h4><a href="/lsapp/public/contratos/{{$contrato->id}}">{{$contrato->id}} {{$contrato->nombre_contrato}}</a></h4>
                 
-                <small>{{$contrato->created_at}}</small>
+                <small>{{$contrato->created_at}} by {{$contrato->nombre_cliente}}</small>
             </div>
         @endforeach
     @else
