@@ -1,18 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>{{$contrato->nombre_contrato}}</h1>
-    <p>ID contrato: {{$contrato->id}}</p>
-    <p>ID cliente: {{$contrato->id_cliente}}</p>
-    <p>Creado: {{$contrato->created_at}}</p>
-    <p>Actualizado: {{$contrato->updated_at}}</p>
-    
     @if(!Auth::guest())
-        <a href="/lsapp/public/contratos/{{$contrato->id}}/edit" class="btn btn-default">Edit</a>
+        @if(Auth::user()->id == $contrato->id_cliente)
+            <h1>{{$contrato->nombre_contrato}}</h1>
+            <p>ID contrato: {{$contrato->id}}</p>
+            <p>ID cliente: {{$contrato->id_cliente}}</p>
+            <p>Creado: {{$contrato->created_at}}</p>
+            <p>Actualizado: {{$contrato->updated_at}}</p>
         
-        {!!Form::open(['action' => ['ContratosController@destroy', $contrato->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-            {{Form::hidden('_method', 'DELETE')}}
-            {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-        {!!Form::close()!!}
+            <a href="/lsapp/public/contratos/{{$contrato->id}}/edit" class="btn btn-default">Edit</a>
+            
+            {!!Form::open(['action' => ['ContratosController@destroy', $contrato->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                {{Form::hidden('_method', 'DELETE')}}
+                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+            {!!Form::close()!!}
+        @endif
     @endif
 @endsection

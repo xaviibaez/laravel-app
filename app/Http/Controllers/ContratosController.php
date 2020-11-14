@@ -83,6 +83,12 @@ class ContratosController extends Controller
     public function edit($id)
     {
         $contrato = Contrato::find($id);
+
+        //Checkear que sea el user correcto
+        if(auth()->user->id !== $contrato->id_cliente){
+            return redirect('/contratos')->with('error', 'Unauthorized Page');
+        }
+
         return view('contratos.edit')->with('contrato', $contrato);
     }
 
@@ -99,6 +105,11 @@ class ContratosController extends Controller
             'nombre_contrato' => 'required',
             'nombre_cliente' => 'required',
         ]);
+
+        //Checkear que sea el user correcto
+        if(auth()->user->id !== $contrato->id_cliente){
+            return redirect('/contratos')->with('error', 'Unauthorized Page');
+        }
 
         //Crear nuevo contrato
         $contrato = Contrato::find($id);
@@ -118,6 +129,12 @@ class ContratosController extends Controller
     public function destroy($id)
     {
         $contrato = Contrato::find($id);
+
+        //Checkear que sea el user correcto
+        if(auth()->user->id !== $contrato->id_cliente){
+            return redirect('/contratos')->with('error', 'Unauthorized Page');
+        }
+
         $contrato->delete();
         return redirect('/contratos')->with('success', 'Contrato eliminado');
     }

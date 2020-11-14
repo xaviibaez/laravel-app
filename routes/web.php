@@ -19,3 +19,6 @@ Route::resource('contratos', 'ContratosController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//http://localhost/lsapp/public/
+//Instalado en C:\xampp\htdocs\lsapp

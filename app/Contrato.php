@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contrato extends Model
 {
+    //Mapea la bbdd
     //Primary key
     public $primaryKey = 'id';
 
