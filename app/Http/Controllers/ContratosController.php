@@ -110,6 +110,8 @@ class ContratosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contrato = Contrato::find($id);
+        $contrato->delete();
+        return redirect('/contratos')->with('success', 'Contrato eliminado');
     }
 }
