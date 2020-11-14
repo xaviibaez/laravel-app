@@ -8,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    <a href="/lsapp/public/contratos/create" class="btn btn-primary">Create contrato</a>
+                    <a href="/lsapp/public/contratos/create" class="btn btn-primary">Crear contrato</a>
                     <h3>Tus contratos:</h3>
                     @if(count($contratos) > 0)
                         <table class="table table-striped">
