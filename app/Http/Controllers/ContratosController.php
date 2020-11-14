@@ -39,14 +39,13 @@ class ContratosController extends Controller
     {
         $this->validate($request, [
             'nombre_contrato' => 'required',
-            'id_cliente' => 'required',
             'nombre_cliente' => 'required',
         ]);
 
         //Crear nuevo contrato
         $contrato = new Contrato;
         $contrato->nombre_contrato = $request->input('nombre_contrato');
-        $contrato->id_cliente = $request->input('id_cliente');
+        $contrato->id_cliente = auth()->user()->id;
         $contrato->nombre_cliente = $request->input('nombre_cliente');
         $contrato->save();
 
@@ -88,14 +87,12 @@ class ContratosController extends Controller
     {
         $this->validate($request, [
             'nombre_contrato' => 'required',
-            'id_cliente' => 'required',
             'nombre_cliente' => 'required',
         ]);
 
         //Crear nuevo contrato
         $contrato = Contrato::find($id);
         $contrato->nombre_contrato = $request->input('nombre_contrato');
-        $contrato->id_cliente = $request->input('id_cliente');
         $contrato->nombre_cliente = $request->input('nombre_cliente');
         $contrato->save();
 

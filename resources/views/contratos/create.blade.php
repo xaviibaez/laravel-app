@@ -8,10 +8,6 @@
             {{Form::text('nombre_contrato', '', ['class' => 'form-control', 'placeholder' => 'Nombre del contrato'])}}
         </div>
         <div class="form-group">
-            {{Form::label('id_cliente', 'ID del cliente')}}
-            {{Form::text('id_cliente', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'ID del cliente'])}}
-        </div>
-        <div class="form-group">
             {{Form::label('nombre_cliente', 'Nombre del cliente')}}
             {{Form::text('nombre_cliente', '', ['class' => 'form-control', 'placeholder' => 'Nombre del cliente'])}}
         </div>

@@ -8,10 +8,6 @@
             {{Form::text('nombre_contrato', $contrato->nombre_contrato, ['class' => 'form-control', 'placeholder' => 'Nombre del contrato'])}}
         </div>
         <div class="form-group">
-            {{Form::label('id_cliente', 'ID del cliente')}}
-            {{Form::textarea('id_cliente', $contrato->id_cliente, ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'ID del cliente'])}}
-        </div>
-        <div class="form-group">
             {{Form::label('nombre_cliente', 'Nombre del cliente')}}
             {{Form::textarea('nombre_cliente', $contrato->nombre_cliente, ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Nombre del cliente'])}}
         </div>
