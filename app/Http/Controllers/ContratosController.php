@@ -49,7 +49,7 @@ class ContratosController extends Controller
         $contrato->id_cliente = $request->input('id_cliente');
         $contrato->nombre_cliente = $request->input('nombre_cliente');
         $contrato->save();
-        
+
         return redirect('/contratos')->with('success', 'Contrato creado');
     }
 
@@ -73,7 +73,8 @@ class ContratosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contrato = Contrato::find($id);
+        return view('contratos.edit')->with('contrato', $contrato);
     }
 
     /**

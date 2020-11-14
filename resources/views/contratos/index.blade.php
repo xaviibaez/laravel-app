@@ -2,6 +2,8 @@
 
 @section('content')
     <h1>Contratos</h1>
+    <a href="/lsapp/public/contratos/create" class="btn btn-default">Crear contrato</a>
+    
     @if(count($contratos) > 0)
         @foreach ($contratos as $contrato)
             <div class="well">
@@ -10,7 +12,6 @@
                 <small>{{$contrato->created_at}}</small>
             </div>
         @endforeach
-
     @else
         <p>No hay contratos</p>
     @endif
