@@ -13,7 +13,7 @@
                     @if(count($contratos) > 0)
                         <table class="table table-striped">
                             <tr>
-                                <th>Title</th>
+                                <th>Nombre del contrato:</th>
                                 <th></th>
                                 <th></th>
                             </tr>

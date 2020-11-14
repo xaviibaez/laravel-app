@@ -10,6 +10,6 @@ class Contrato extends Model
     public $primaryKey = 'id';
 
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User' , 'id_cliente');
     }
 }

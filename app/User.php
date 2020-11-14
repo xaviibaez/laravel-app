@@ -28,6 +28,6 @@ class User extends Authenticatable
     ];
 
     public function contratos(){
-        return $this->hasMany('App\Contrato');
+        return $this->hasMany('App\Contrato' , 'id_cliente', 'id');
     }
 }
