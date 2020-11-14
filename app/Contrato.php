@@ -8,4 +8,8 @@ class Contrato extends Model
 {
     //Primary key
     public $primaryKey = 'id';
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }
