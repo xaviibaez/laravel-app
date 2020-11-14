@@ -86,7 +86,20 @@ class ContratosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nombre_contrato' => 'required',
+            'id_cliente' => 'required',
+            'nombre_cliente' => 'required',
+        ]);
+
+        //Crear nuevo contrato
+        $contrato = Contrato::find($id);
+        $contrato->nombre_contrato = $request->input('nombre_contrato');
+        $contrato->id_cliente = $request->input('id_cliente');
+        $contrato->nombre_cliente = $request->input('nombre_cliente');
+        $contrato->save();
+
+        return redirect('/contratos')->with('success', 'Contrato editado');
     }
 
     /**
